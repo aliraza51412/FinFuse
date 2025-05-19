@@ -49,7 +49,7 @@ body {
 .secondary-btn:hover {
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--primary-color);
 }
 /* HEADER */
 header {
@@ -363,7 +363,7 @@ header {
   width: 450px;
 }
 #about-top-section .inner-content p {
-  font-size: 1em;
+  font-size: 1rem;
   line-height: 24px;
   margin-bottom: 25px;
   color: #040404d8;
@@ -564,7 +564,6 @@ header {
     transform: translateX(0%);
   }
 }
-
 #network .networks-scroll .logos p {
   background-color: var(--white);
   padding: 1.5rem 2rem;
@@ -627,5 +626,151 @@ header {
   }
   #network .networks-scroll .logos p i {
     font-size: 1rem;
+  }
+}
+/* OUR SOULTIONS SECTION STYLING */
+#solutions {
+  width: 100%;
+  height: auto;
+  margin: 100px 0;
+  padding-bottom: 100px;
+}
+#solutions-top-content {
+  width: 550px;
+  margin: auto;
+}
+#solutions-top-content h2 {
+  font-size: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  font-weight: 600;
+}
+#solutions-top-content p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+  margin-top: 20px;
+  color: #040404d8;
+}
+@media (max-width: 647px) {
+  #solutions-top-content {
+    width: auto;
+  }
+}
+@media (max-width: 430px) {
+  #solutions-top-content h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+#solutions-btm-content {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 50px;
+}
+#solutions-btm-content .box {
+  border-radius: 20px;
+  overflow: hidden;
+}
+#solutions-btm-content > :nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+#solutions-btm-content > :nth-child(1) img,
+#solutions-btm-content > :nth-child(4) img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#solutions-btm-content > :nth-child(2),
+#solutions-btm-content > :nth-child(3) {
+  background-color: #f5f4f7;
+  place-content: center;
+  padding: 2rem 2rem 3rem 2rem;
+}
+#solutions-btm-content > :nth-child(2) span,
+#solutions-btm-content > :nth-child(3) span {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.7rem;
+  margin-bottom: 10px;
+}
+#solutions-btm-content > :nth-child(2) h3,
+#solutions-btm-content > :nth-child(3) h3 {
+  font-size: 2rem;
+  line-height: 2.2rem;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+#solutions-btm-content > :nth-child(2) p,
+#solutions-btm-content > :nth-child(3) p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #040404d8;
+  margin: 20px 0 50px 0;
+}
+#solutions-btm-content > :nth-child(2) a,
+#solutions-btm-content > :nth-child(3) a {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--white);
+  text-transform: capitalize;
+  background-color: var(--primary-color);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+}
+#solutions-btm-content > :nth-child(2) a:hover,
+#solutions-btm-content > :nth-child(3) a:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-weight: 500;
+}
+#solutions-btm-content > :nth-child(4) {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+@media (max-width: 1024px) {
+  #solutions-btm-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #solutions-btm-content > :nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  #solutions-btm-content > :nth-child(4) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+}
+@media (max-width: 768px) {
+  #solutions-btm-content {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  #solutions-btm-content > :nth-child(1),
+  #solutions-btm-content > :nth-child(2),
+  #solutions-btm-content > :nth-child(3) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  #solutions-btm-content > :nth-child(4) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+  }
+}
+@media (max-width: 375px) {
+  #solutions-btm-content > :nth-child(2) a,
+  #solutions-btm-content > :nth-child(3) a {
+    font-size: 0.8rem;
+    padding: 1rem;
   }
 }
