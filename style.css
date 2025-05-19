@@ -340,8 +340,9 @@ header {
 /* ABOUT US STYLING */
 #about {
   width: 100%;
-  min-height: 100%;
+  height: auto;
   background-color: var(--white);
+  margin: 70px 0;
 }
 #about-top-section {
   width: 100%;
@@ -474,6 +475,7 @@ header {
 /* MEDIA QUERY FOR 912px */
 @media (max-width: 912px) {
   #about-btm-section {
+    height: 100%;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
@@ -506,21 +508,124 @@ header {
   }
 }
 /* JOINING FORCES | NETWORK SECTION */
-/* #network {
+#network {
   width: 100%;
-  height: 400px;
+  height: auto;
   background-color: #f5f4f7;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 100px 0;
 }
-#network h2{
+#network h2 {
   text-align: center;
   font-size: 3rem;
-  padding: 20px 0;
+  padding: 1.3rem 2rem;
   letter-spacing: -1px;
   line-height: 3rem;
+  margin-bottom: 50px;
 }
-#network .network-logos{
+#network h2::after {
+  display: block;
+  content: " Diverse Network";
+}
+#network .networks-scroll {
+  position: relative;
   display: flex;
-} */
+  width: 100%;
+  overflow: hidden;
+}
+#network .networks-scroll .logos {
+  white-space: nowrap;
+  display: flex;
+  margin-bottom: 20px;
+}
+#network .networks-scroll .animation-one {
+  animation: animate var(--t) linear infinite;
+}
+#network .networks-scroll .animation-two {
+  animation: animatetwo var(--t) linear infinite;
+}
+/* ANIMATION ONE */
+@keyframes animate {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+/* ANIMATION TWO  */
+@keyframes animatetwo {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+#network .networks-scroll .logos p {
+  background-color: var(--white);
+  padding: 1.5rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-align: center;
+  text-transform: capitalize;
+}
+#network .networks-scroll .logos p i {
+  margin-right: 10px;
+  background-color: var(--Ultramarine-blue);
+  padding: 0.8rem;
+  color: var(--white);
+  border-radius: 50px;
+  font-size: 1.3rem;
+}
+/* SPECIFIC ICONS BACKGROUND COLORS */
+#network .networks-scroll .logos p .facebook {
+  background-color: #1154f0;
+}
+#network .networks-scroll .logos p .instagram {
+  background-color: #f4348f;
+}
+#network .networks-scroll .logos p .twitter-x {
+  background-color: #1ea0f0;
+}
+#network .networks-scroll .logos p .vimeo {
+  background-color: #1ab5eb;
+}
+#network .networks-scroll .logos p .gitlab {
+  background-color: #fe6f29;
+}
+#network .networks-scroll .logos p .linkedin {
+  background-color: #2769b2;
+}
+#network .networks-scroll .logos p .discord {
+  background-color: #7389db;
+}
+#network .networks-scroll .logos p .dribbble {
+  background-color: #eb4d89;
+}
+#network .networks-scroll .logos p .pinterest {
+  background-color: #e40026;
+}
+#network .networks-scroll .logos p .behance {
+  background-color: #1058fd;
+}
+@media (max-width: 624px) {
+  #network h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  #network h2::after {
+    display: inline;
+  }
+  #network .networks-scroll .logos p {
+    padding: 1.5rem 2rem;
+    font-size: 1rem;
+  }
+  #network .networks-scroll .logos p i {
+    font-size: 1rem;
+  }
+}
