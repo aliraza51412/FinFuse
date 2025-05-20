@@ -634,7 +634,7 @@ header {
   width: 100%;
   height: auto;
   margin: 100px 0;
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
 }
 /* SOLUTIONS TOP CONTENT SECTION */
 #solutions-top-content {
@@ -790,15 +790,17 @@ header {
 /* OUR WORK SECTION STYLING */
 #our-work {
   width: 100%;
-  height: 100%;
+  height: auto;
   background-color: #f5f4f7;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 /* OUR WORK TOP CONTENT STYLING */
 #our-work-top-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 70px 0;
+  margin-bottom: 70px;
   gap: 50px;
 }
 #our-work-top-content h2 {
@@ -817,6 +819,7 @@ header {
   line-height: 1.5rem;
   color: #040404d8;
 }
+/* OUR WORK TOP CONTENT STYLING USING MEDIA QUERY */
 @media (max-width: 768px) {
   #our-work-top-content {
     flex-direction: column;
@@ -833,6 +836,7 @@ header {
     line-height: 2rem;
   }
 }
+/* OUR WORK BOTTOM CONTENT STYLING */
 #our-work-btm-content {
   width: 100%;
   display: grid;
@@ -840,26 +844,47 @@ header {
   grid-template-rows: repeat(1, 1fr);
   gap: 25px;
 }
+/* 2 BOX STYLING INSIDE OUR WORK BOTTOM CONTENT SECTION */
 #our-work-btm-content .box {
   border-radius: 20px;
   overflow: hidden;
   height: 350px;
 }
+/* FIRST BOX STYLING USING :nth-child(1) PROPERTY */
 #our-work-btm-content > :nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-image: url("./images/pexels-wewe-yang-2383099-4515802.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 2rem;
 }
-#our-work-btm-content > :nth-child(1) .box-top-content h3{
+/* FIRST BOX TOP CONTENT */
+#our-work-btm-content > :nth-child(1) .box-top-content h3 {
   font-size: 4.5rem;
   color: var(--secondary-color);
 }
-#our-work-btm-content > :nth-child(1) .box-top-content p{
+#our-work-btm-content > :nth-child(1) .box-top-content p {
   font-size: 1rem;
   color: var(--white);
 }
+/* FIRST BOX BOTTOM CONTENT */
+#our-work-btm-content > :nth-child(1) .box-btm-content .user-images img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: -15px;
+}
+#our-work-btm-content > :nth-child(1) .box-btm-content .user-images::after {
+  content: "+";
+  font-size: 4.5rem;
+  font-weight: 500;
+  color: var(--secondary-color);
+  margin-left: 15px;
+}
+/* SECOND BOX STYLING USING :nth-child(2) PROPERTY */
 #our-work-btm-content > :nth-child(2) {
   grid-column-start: 2;
   grid-column-end: 4;
@@ -871,7 +896,7 @@ header {
   background-size: cover;
   position: relative;
 }
-#our-work-btm-content > :nth-child(2) div{
+#our-work-btm-content > :nth-child(2) div {
   height: 100%;
   width: 100%;
   background-color: #040404;
@@ -879,8 +904,9 @@ header {
 }
 #our-work-btm-content > :nth-child(2)::after {
   content: "How we work";
-  font-size: 3rem;
-  letter-spacing: 2px;
+  font-size: 2.5rem;
+  text-align: center;
+  letter-spacing: 5px;
   text-transform: uppercase;
   font-weight: 500;
   color: var(--white);
@@ -888,4 +914,34 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+/* OUR WORK BOTTOM CONTENT STYLING USING MEDIA QUERY */
+@media (max-width: 1024px) {
+  #our-work-btm-content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  #our-work-btm-content {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  #our-work-btm-content > :nth-child(1),
+  #our-work-btm-content > :nth-child(2) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+@media (max-width: 430px) {
+  #our-work-btm-content > :nth-child(1) .box-top-content h3 {
+    font-size: 3rem;
+  }
+  #our-work-btm-content > :nth-child(1) .box-btm-content .user-images img {
+    width: 35px;
+    height: 35px;
+  }
+  #our-work-btm-content > :nth-child(1) .box-btm-content .user-images::after {
+    font-size: 3rem;
+  }
 }
