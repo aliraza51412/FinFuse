@@ -612,6 +612,7 @@ header {
 #network .networks-scroll .logos p .behance {
   background-color: #1058fd;
 }
+/* MEDIA QUERY FOR 624px */
 @media (max-width: 624px) {
   #network h2 {
     font-size: 2rem;
@@ -635,6 +636,7 @@ header {
   margin: 100px 0;
   padding-bottom: 100px;
 }
+/* SOLUTIONS TOP CONTENT SECTION */
 #solutions-top-content {
   width: 550px;
   margin: auto;
@@ -652,17 +654,20 @@ header {
   margin-top: 20px;
   color: #040404d8;
 }
+/* MEDIA QUERY FOR 647px */
 @media (max-width: 647px) {
   #solutions-top-content {
     width: auto;
   }
 }
+/* MEDIA QUERY FOR 430px */
 @media (max-width: 430px) {
   #solutions-top-content h2 {
     font-size: 2rem;
     line-height: 2rem;
   }
 }
+/* SOLUTIONS BOTTOM CONTENT SECTION */
 #solutions-btm-content {
   width: 100%;
   height: auto;
@@ -737,6 +742,7 @@ header {
   grid-column-start: 2;
   grid-column-end: 4;
 }
+/* MEDIA QUERY FOR 1024px */
 @media (max-width: 1024px) {
   #solutions-btm-content {
     grid-template-columns: repeat(2, 1fr);
@@ -750,6 +756,7 @@ header {
     grid-column-end: 3;
   }
 }
+/* MEDIA QUERY FOR 768px */
 @media (max-width: 768px) {
   #solutions-btm-content {
     grid-template-columns: repeat(1, 1fr);
@@ -767,6 +774,7 @@ header {
     grid-row-start: 3;
   }
 }
+/* MEDIA QUERY FOR 430px */
 @media (max-width: 430px) {
   #solutions-btm-content > :nth-child(2) h3,
   #solutions-btm-content > :nth-child(3) h3 {
@@ -778,4 +786,106 @@ header {
     font-size: 0.8rem;
     padding: 1rem;
   }
+}
+/* OUR WORK SECTION STYLING */
+#our-work {
+  width: 100%;
+  height: 100%;
+  background-color: #f5f4f7;
+}
+/* OUR WORK TOP CONTENT STYLING */
+#our-work-top-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 70px 0;
+  gap: 50px;
+}
+#our-work-top-content h2 {
+  width: 480px;
+  font-size: 3rem;
+  line-height: 3rem;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+#our-work-top-content span {
+  color: var(--primary-color);
+}
+#our-work-top-content p {
+  width: 450px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #040404d8;
+}
+@media (max-width: 768px) {
+  #our-work-top-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  #our-work-top-content h2,
+  #our-work-top-content p {
+    width: auto;
+  }
+}
+@media (max-width: 430px) {
+  #our-work-top-content h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+#our-work-btm-content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 25px;
+}
+#our-work-btm-content .box {
+  border-radius: 20px;
+  overflow: hidden;
+  height: 350px;
+}
+#our-work-btm-content > :nth-child(1) {
+  background-image: url("./images/pexels-wewe-yang-2383099-4515802.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2rem;
+}
+#our-work-btm-content > :nth-child(1) .box-top-content h3{
+  font-size: 4.5rem;
+  color: var(--secondary-color);
+}
+#our-work-btm-content > :nth-child(1) .box-top-content p{
+  font-size: 1rem;
+  color: var(--white);
+}
+#our-work-btm-content > :nth-child(2) {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+#our-work-btm-content > :nth-child(2) {
+  background-image: url("./images/pexels-fauxels-3184611.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#our-work-btm-content > :nth-child(2) div{
+  height: 100%;
+  width: 100%;
+  background-color: #040404;
+  opacity: 0.3;
+}
+#our-work-btm-content > :nth-child(2)::after {
+  content: "How we work";
+  font-size: 3rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
