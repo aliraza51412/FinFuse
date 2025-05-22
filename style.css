@@ -17,6 +17,9 @@ body {
   height: 100%;
   width: 100%;
 }
+html {
+  scroll-behavior: smooth;
+}
 /* MAIN CLASSES */
 .container {
   width: 100%;
@@ -64,6 +67,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 3.5rem;
+  /* position: fixed;
+  z-index: 999; */
 }
 #brand-logo a {
   font-size: 1.2rem;
@@ -342,7 +347,9 @@ header {
   width: 100%;
   height: auto;
   background-color: var(--white);
-  margin: 70px 0;
+  /* margin: 70px 0; */
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 #about-top-section {
   width: 100%;
@@ -633,8 +640,9 @@ header {
 #solutions {
   width: 100%;
   height: auto;
-  margin: 100px 0;
-  /* padding-bottom: 100px; */
+  /* margin: 100px 0; */
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 /* SOLUTIONS TOP CONTENT SECTION */
 #solutions-top-content {
