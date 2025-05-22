@@ -1235,6 +1235,7 @@ header {
   background-color: var(--primary-color);
   color: var(--white);
 }
+/* FOOTER TOP CONTENT STYLING */
 #footer-top-content {
   width: 100%;
   display: flex;
@@ -1243,10 +1244,13 @@ header {
   padding-top: 50px;
   gap: 20px;
 }
-#footer-top-content .image img {
-  width: 400px;
-  height: auto;
-  object-fit: contain;
+/* FOOTER TOP CONTENT FIRST DIV STYLING */
+#footer-top-content > :first-child {
+  height: 220px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 50px;
 }
 #footer-top-content h2 {
   max-width: 550px;
@@ -1258,36 +1262,36 @@ header {
   content: "We Protect Your Money";
   display: inline-block;
 }
-#footer-top-content > :first-child {
-  height: 220px;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  gap: 50px;
-}
 #footer-top-content .box {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
 }
-#footer-top-content .box .content {
+#footer-top-content .box .info-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
 }
-#footer-top-content .box .content i {
+#footer-top-content .box .info-content i {
   color: var(--primary-color);
   background-color: var(--white);
   padding: 0.5rem;
   font-size: 1.2rem;
   border-radius: 50px;
 }
-#footer-top-content .box .content p,
-#footer-top-content .box .content a {
+#footer-top-content .box .info-content p,
+#footer-top-content .box .info-content a {
   color: #ffffffd8;
 }
+/* FOOTER TOP CONTENT IMAGE */
+#footer-top-content .image img {
+  width: 400px;
+  height: auto;
+  object-fit: contain;
+}
+/* FOOTER BOTTOM CONTENT STYLING */
 #footer-btm-content {
   border-top: 1px solid var(--white);
   padding: 2rem 0;
@@ -1303,9 +1307,11 @@ header {
 #footer-btm-content .box a:hover {
   color: var(--secondary-color);
 }
+/* TARGET FOOTER BOTTOM CONTENT SECOND CHILD BOX ELEMENT */
 #footer-btm-content .box > :nth-child(2) {
   padding-left: 30px;
 }
+/* MEDIA QUERY FOR FOOTER TOP CONTENT */
 @media (max-width: 1024px) {
   #footer-top-content h2 {
     font-size: 2rem;
@@ -1315,7 +1321,9 @@ header {
     align-items: baseline;
   }
 }
+/* MEDIA QUERY FOR FOOTER */
 @media (max-width: 820px) {
+/* FOOTER TOP CONTENT  */
   #footer-top-content {
     flex-direction: column;
     align-items: baseline;
@@ -1326,18 +1334,36 @@ header {
   #footer-top-content .image img {
     float: right;
   }
+/* FOOTER BOTTOM CONTENT  */
   #footer-btm-content {
     flex-direction: column;
     gap: 10px;
     align-items: baseline;
   }
 }
-@media (max-width: 510px){
-  #footer-top-content > :first-child{
+/* MEDIA QUERY FOR FOOTER TOP CONTENT */
+@media (max-width: 510px) {
+  #footer-top-content > :first-child {
     padding-bottom: 50px;
     height: auto;
   }
   #footer-top-content .image {
     display: none;
+  }
+}
+/* MEDIA QUERY FOR FOOTER */
+@media (max-width: 375px) {
+/* FOOTER TOP CONTENT */
+  #footer-top-content h2 {
+    font-size: 1.5rem;
+  }
+  #footer-top-content .box .info-content p,
+  #footer-top-content .box .info-content a {
+    font-size: 0.8rem;
+  }
+/* FOOTER BOTTOM CONTENT */
+  #footer-btm-content .box p,
+  #footer-btm-content .box a {
+    font-size: 0.8rem;
   }
 }
