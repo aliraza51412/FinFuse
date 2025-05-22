@@ -855,7 +855,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: url("./images/pexels-wewe-yang-2383099-4515802.jpg");
+  background-image: url("./images/Building.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -890,7 +890,7 @@ header {
   grid-column-end: 4;
 }
 #our-work-btm-content > :nth-child(2) {
-  background-image: url("./images/pexels-fauxels-3184611.jpg");
+  background-image: url("./images/How\ We\ Work.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1352,7 +1352,7 @@ header {
   }
 }
 /* MEDIA QUERY FOR FOOTER */
-@media (max-width: 375px) {
+@media (max-width: 390px) {
 /* FOOTER TOP CONTENT */
   #footer-top-content h2 {
     font-size: 1.5rem;
