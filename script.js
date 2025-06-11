@@ -9,3 +9,15 @@ humbergerMenu.addEventListener('click' , () => {
 sidebarCloseBtn.addEventListener('click' , () => {
     sidebar.style.transform = 'translateX(-250px)';
 })
+
+// NAVBAR SCROLL
+document.addEventListener("DOMContentLoaded", function () {
+    window.addEventListener("scroll", function () {
+        const navbar = document.querySelector('#navbar');
+        if (window.scrollY > 60) {
+            navbar.classList.add('navbar_scroll');
+        } else {
+            navbar.classList.remove('navbar_scroll');
+        }
+    });
+});
